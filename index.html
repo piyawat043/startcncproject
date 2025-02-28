@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>สร้างหรือแก้ไข?</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f4f4f4;
+        }
+
+        .title {
+            font-size: 36px;
+            font-weight: bold;
+            margin-bottom: 30px;
+        }
+
+        .container {
+            display: flex;
+            gap: 50px;
+        }
+
+        .box-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .box {
+            position: relative;
+            width: 350px;
+            height: 350px;
+            overflow: hidden;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            cursor: pointer;
+            transition: transform 0.3s ease-in-out;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: white;
+        }
+
+        .box:hover {
+            transform: scale(1.1);
+        }
+
+        .box img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            transition: opacity 0.5s ease-in-out;
+        }
+
+        .box .hover-img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            opacity: 0;
+        }
+
+        .box:hover .hover-img {
+            opacity: 1;
+        }
+
+        .text {
+            margin-top: 20px;
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                flex-direction: column;
+                gap: 30px;
+            }
+            
+            .box {
+                width: 280px;
+                height: 280px;
+            }
+
+            .text {
+                font-size: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="title">สร้างใหม่ หรือ แก้ไข?</div>
+    <div class="container">
+        <div class="box-container">
+            <div class="box">
+                <img src="hmr.png" alt="แผ่นไม้กันชื้นHMR" class="default-img">
+                <img src="hmrcncmini.png" alt="แกะสลัก" class="hover-img">
+            </div>
+            <p class="text">สร้างใหม่</p>
+        </div>
+
+        <div class="box-container">
+            <div class="box">
+                <img src="aluminiumprofile.png" alt="อลูมิเนียมprofile" class="default-img">
+                <img src="aluminiumcnc.png" alt="อุปกรณ์พิเศษ" class="hover-img">
+            </div>
+            <p class="text">แก้ไขหรือดัดแปลง</p>
+        </div>
+    </div>
+
+</body>
+</html>
